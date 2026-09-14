@@ -1,0 +1,6 @@
+node_modules/
+.next/
+target/
+*.class
+.env
+.DS_Store
