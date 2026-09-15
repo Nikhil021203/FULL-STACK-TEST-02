@@ -10,10 +10,18 @@ services:
     dockerContext: ./backend
     plan: free
     envVars:
-      - key: DATABASE_URL
+      - key: DB_HOST
         fromDatabase:
           name: fullstack-test-db-2
-          property: connectionString
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: fullstack-test-db-2
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: fullstack-test-db-2
+          property: database
       - key: DB_USER
         fromDatabase:
           name: fullstack-test-db-2
