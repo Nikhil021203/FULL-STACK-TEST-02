@@ -40,5 +40,7 @@ services:
     dockerContext: ./frontend
     plan: free
     envVars:
+      - key: HOSTNAME
+        value: 0.0.0.0
       - key: NEXT_PUBLIC_API_URL
         value: https://fullstack-test-backend-2.onrender.com
